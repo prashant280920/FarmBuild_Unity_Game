@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4264814717124516537}
   - component: {fileID: -2714737527719127866}
   - component: {fileID: 6898718306694602464}
-  - component: {fileID: 2777283060077819986}
+  - component: {fileID: 968754489635858159}
   m_Layer: 0
   m_Name: traingle
   m_TagString: Untagged
@@ -119,9 +119,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &2777283060077819986
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!60 &968754489635858159
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,6 +143,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.57, y: 2.57}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.004825242, y: 1.285}
+      - {x: -0.8057427, y: -0.32486892}
+      - {x: -1.2537761, y: -1.2145244}
+      - {x: -1.2750436, y: -1.2748252}
+      - {x: -1.285, y: -1.285}
+      - {x: 1.285, y: -1.285}
+      - {x: 1.2451748, y: -1.2049562}
+      - {x: 0.045436896, y: 1.1854368}

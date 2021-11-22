@@ -9,9 +9,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 74e99b64f9b83164d9bcb030753077fa
   - enabled: 1
-    path: Assets/Scenes/ChooseField.unity
-    guid: 7c0fb800d9d8f31469572ae762255d7e
-  - enabled: 1
     path: Assets/Scenes/Field.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/choose.unity
+    guid: db8e64c4a9fc4c24ea90d15c745a626a
+  - enabled: 1
+    path: Assets/Scenes/Result.unity
+    guid: c164c865c03ca02479d78630cce72dfc
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 54bc180e76a81cf44be160c0f43984ec
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: 61bbb6902a7fc7c478018ffad6ea23ea
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: bff7aa60f2e03ad4a824f70f9a8911fa
+  - enabled: 1
+    path: Assets/Scenes/Choice.unity
+    guid: 856b5a14fb475c34b89718f3469a2d19
+  - enabled: 1
+    path: Assets/Scenes/Garage.unity
+    guid: a1bf637c5e4ef254a90748cc1492306f
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: b3a13cf7843227044957bf6fa0297ae2
+  - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: f289078dc6cc3b347a8a5ba4afef04ce
   m_configObjects: {}

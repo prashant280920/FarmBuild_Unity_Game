@@ -10,8 +10,7 @@ public class Drag_Object : MonoBehaviour{
     float hor, ver;
     bool iscolide;
     public void OnMouseDown(){
-        isDrag = true;
-        
+        isDrag = true;   
     }
     
     public void OnMouseUp(){
@@ -19,41 +18,34 @@ public class Drag_Object : MonoBehaviour{
     }
     void Start(){
         rbody2D = GetComponent<Rigidbody2D>();
-         transform.eulerAngles = startRotation;
-         speed = 35;
-         iscolide = true;
+        transform.eulerAngles = startRotation;
+        speed = 35;
+        iscolide = true;
     }
     
    
-
     void Update(){
-       
-            hor = Input.GetAxis("Horizontal");
-            ver = Input.GetAxis("Vertical");
-            // if(Input.GetKey(KeyCode.E)){
-            //     Destroy(Rigidbody2D);
-            // }
-  
+        hor = Input.GetAxis("Horizontal");
+        ver = Input.GetAxis("Vertical");
     }
 
     void FixedUpdate(){
         if(isDrag){
-             if(Input.GetKey(KeyCode.Q)){
+            if(Input.GetKey(KeyCode.Q)){
+                rbody2D.bodyType = RigidbodyType2D.Kinematic;
                 transform.Rotate(Vector3.forward,speed*Time.deltaTime);
             }
             if((hor!=0 || ver!=0) && iscolide){
-               // Debug.Log(isDrag);
+                rbody2D.bodyType = RigidbodyType2D.Dynamic;
                 Vector2 position = rbody2D.position;
                 position.x += 2.5f*hor*Time.deltaTime;
                 position.y += 2.5f*ver*Time.deltaTime;
-                //Debug.Log(position);
                 rbody2D.MovePosition(position);
             }
-             
+        }
+        if(Input.GetKey(KeyCode.E)){    
+            rbody2D.bodyType = RigidbodyType2D.Static;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collider){
-        Debug.Log("Trigger");
-        iscolide = false;
-    }
+
 }
