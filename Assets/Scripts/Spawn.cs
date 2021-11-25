@@ -21,11 +21,11 @@ public class Spawn : MonoBehaviour
         Debug.Log(level);
         area = 0;
         TextMeshProUGUI olt = objectLeftText.GetComponent<TextMeshProUGUI>();
-        olt.text = "Object Left: "+objects;
+        olt.text = ": "+objects;
         TextMeshProUGUI s = score.GetComponent<TextMeshProUGUI>();
-        s.text = "Score: "+Main.total_score;
+        s.text = ": "+Main.total_score;
         TextMeshProUGUI i = item2x.GetComponent<TextMeshProUGUI>();
-        i.text = "2X : "+Main.item2x;
+        i.text = ": "+Main.item2x;
     }
 
     void Update()
@@ -39,39 +39,39 @@ public class Spawn : MonoBehaviour
     }
     void spawn(Vector2 mousePos){   
         randomInt = Random.Range(0, prefabs.Length);
-        
+        Debug.Log(prefabs.Length);
         areaCalculation(randomInt);
         Debug.Log(area);
         Instantiate(prefabs[randomInt], mousePos, Quaternion.identity);
         objects = objects-1;
         TextMeshProUGUI olt = objectLeftText.GetComponent<TextMeshProUGUI>();
-        olt.text = "Object Left: "+objects;
+        olt.text = ": "+objects;
     }
 
     void areaCalculation(int i){
         if(level==1){
-            if(randomInt==i) area+=65144;
-            else if(randomInt==i) area+=31144;
-            else if(randomInt==i) area+=28600;
-            else if(randomInt==i) area+=73170;
-            else if(randomInt==i) area+=10000;
-            else if(randomInt==i) area+=10200;
+            if(0==i) area+=65144;
+            else if(1==i) area+=31144;
+            else if(2==i) area+=28600;
+            else if(3==i) area+=73170;
+            else if(4==i) area+=40000;
+            else if(5==i) area+=40000;
         }
         else if(level==2){
-            if(randomInt==i) area+=65144;
-            else if(randomInt==i) area+=31144;
-            else if(randomInt==i) area+=28600;
-            else if(randomInt==i) area+=73170;
-            else if(randomInt==i) area+=10000;
-            else if(randomInt==i) area+=10200;
+            if(0==i) area+=65144;
+            else if(1==i) area+=31144;
+            else if(2==i) area+=31416;
+            else if(3==i) area+=22500;
+            else if(4==i) area+=30000;
+            else if(5==i) area+=35000;
         }
         else if(level==3){
-            if(randomInt==i) area+=65144;
-            else if(randomInt==i) area+=31144;
-            else if(randomInt==i) area+=28600;
-            else if(randomInt==i) area+=73170;
-            else if(randomInt==i) area+=10000;
-            else if(randomInt==i) area+=10200;
+            if(0==i) area+=31144;
+            else if(1==i) area+=22500;
+            else if(2==i) area+=40000;
+            else if(3==i) area+=73170;
+            else if(4==i) area+=40000;
+            else if(5==i) area+=35000;
         }
     }
 }

@@ -11,7 +11,7 @@ public class End : MonoBehaviour
     void Start()
     {
         TextMeshProUGUI e = end.GetComponent<TextMeshProUGUI>();
-        e.text = "Your Extra Points are : "+Garage_Spawn.garage_area+"\nThank You For Playing ";
+        e.text = ""+ (Garage_Spawn.garage_area+Main.total_score);
     }
 
 }
